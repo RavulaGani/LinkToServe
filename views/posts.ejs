@@ -1,0 +1,18 @@
+<section class="posts bg-color-primary-light">
+    <h1 class="text-4xl font-bold leading-snug mb-4 flex pt-8 justify-center">New Posts</h1>
+    <ul class="mt-12 rounded-xl w-[65%] p-12 mx-auto bg-color-gray">
+        
+      <% data.forEach(post => { %>
+        <li class="flex flex-row justify-center mb-4">
+          <% if (post.adminCheck == "Accepted") { %>
+            <a href="/post/<%= post._id %>" class="text-color-secondary font-semibold">
+              <span class="">&bull; <%= post.title %></span> -
+              <span class="text-white">Posted on <%= post.createdAt.toDateString() %></span>
+            </a>
+          <% } %>
+        </li>
+      <% }); %>     
+        
+    </ul>
+
+</section>

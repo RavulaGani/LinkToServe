@@ -1,0 +1,29 @@
+<div class="w-[70%] mx-auto mt-10">
+    <div class="flex justify-between">
+        <h2 class="text-3xl font-bold">Posts</h2>
+        <a href="/add-post">+ Add new</a>
+    </div> 
+</div>
+<ul class="mt-12 w-[70%] pt-12 pr-12 pl-12 pb-8 mx-auto bg-color-gray">
+    <% data.forEach(post => { %>    
+        <li class="flex flex-row justify-between space-x-10 mb-6">
+            <div>
+                <a href="/post/<%= post._id %>" class="text-color-secondary font-semibold ">
+                    <span class="">&bull; <%= post.title %></span> -
+                    <span class="text-color-white"><%= post.createdAt.toDateString() %></span>
+                </a>
+            </div>
+            
+            <div class="flex flex-row space-x-4">
+                <a href="/edit-post/<%= post._id %>" class="bg-yellow-500 text-white hover:opacity-80 px-3 py-2 font-bold rounded-xl">Edit</a>
+                <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" class="bg-red-600 text-white hover:opacity-80 px-3 py-2 font-bold rounded-xl">
+                </form>
+                <form action="/accept-post/<%= post._id %>?_method=POST" method="POST">
+                    <input type="submit" value="Accept" class="bg-green-600 text-white hover:opacity-80 px-3 py-2 font-bold rounded-xl">
+                </form>
+                
+            </div>
+        </li>
+    <% }) %>
+</ul>

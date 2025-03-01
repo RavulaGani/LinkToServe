@@ -1,0 +1,13 @@
+<section class="bg-color-primary-light" id="post">
+    <h1 class="text-4xl w-[75%] mx-auto font-bold leading-snug pt-8 mb-8 flex justify-center"><%= data.title %></h1>
+    <div class="w-[75%] mx-auto flex justify-around mb-6 text-color-secondary text-xl font-bold">
+        <h2>Pay/day: Rs<%= data.pay %></h2>
+        <h2 class="">Venue: <%= data.venue %></h2>
+    </div>
+    <article class="mx-auto flex justify-center w-[75%]">
+        <%= data.body %>
+    </article>
+    <div class="flex justify-center mt-8 pb-8">
+        <button class="bg-color-secondary text-color-primary-dark ease-in hover:opacity-[50%] duration-200 font-bold px-4 py-2 rounded-lg"><a href="mailto:<%= data.email %>" type="email">Apply</a></button>
+    </div>
+</section>

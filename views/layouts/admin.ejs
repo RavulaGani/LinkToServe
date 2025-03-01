@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="text/javascript" defer src="/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
+
+</head>
+<body class="bg-color-primary text-color-white tracking-wider" style="font-family: 'Poppins', sans-serif">
+    <%- include('../partials/header_admin.ejs') %> 
+    <main class="main">
+        <%- body %>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <script src="../../public/js/script.js"></script>
+</body>
+</html>

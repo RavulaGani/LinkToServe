@@ -1,0 +1,37 @@
+
+<div class="w-[70%] mx-auto mt-4">
+    <h2 class="text-center text-4xl font-bold leading-snug pt-10 mb-12">Add New Post</h2>
+</div>
+
+<form action="/add-post-org" method="POST" class="flex flex-col space-y-10 justify-center items-center">
+
+    <div class="w-[40rem] flex justify-between">
+        <label for="title"><b>Title</b></label>
+        <input type="text" placeholder="Post title" name="title" class="rounded-lg bg-gray-300 text-black mr-[14rem] text-center">
+    </div>
+
+    <div class="w-[40rem] flex justify-between">
+        <label for="body"><b>Content</b></label>
+        <textarea name="body" cols="50" rows="10" class="text-black rounded-lg bg-gray-300"></textarea>
+    </div>
+
+    <div class="w-[40rem] flex justify-between">
+        <label for="pay"><b>Pay</b></label>
+        <input type="text" placeholder="In Rupees" name="pay" class="rounded-lg bg-gray-300 text-black mr-[14rem] text-center">
+    </div>
+
+    <div class="w-[40rem] flex justify-between">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="ex-abc@gmail.com" name="email" class="rounded-lg bg-gray-300 text-black mr-[14rem] text-center">
+    </div>
+
+    <div class="w-[40rem] flex justify-between">
+        <label for="venue"><b>Venue</b></label>
+        <input type="text" placeholder="ex-Chennai" name="venue" class="rounded-lg bg-gray-300 text-black mr-[14rem] text-center">
+    </div>
+    
+    <div>
+        <input type="submit" value="Add" class="bg-green-600 text-white hover:opacity-80 px-3 py-2 font-bold rounded-xl">
+    </div>
+
+</form>
